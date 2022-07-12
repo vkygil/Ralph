@@ -1,12 +1,19 @@
-import logo from './logo.svg';
+ 
 import './App.css';
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <div class="m2 card" style={{ margin: "30px" }}>
-        Mercadohna
-      </div>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+      </Routes>
     </div>
   );
 }
