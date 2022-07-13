@@ -5,11 +5,12 @@ import { Routes, Route, Link } from "react-router-dom";
 import MainPage from "./Vistas/MainPage"
 import Login from "./Vistas/Login"
 import Cart from "./Vistas/Cart"
+import SearchPage from "./Vistas/SearchPage"
 
 function App() {
   return (
     <div className="App">
-      app
+      <SearchPage></SearchPage>
       {/* <Cart></Cart> */}
       {/* <nav>
         <Link to="/">Home</Link>
