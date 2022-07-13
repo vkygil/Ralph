@@ -1,15 +1,14 @@
- 
+
 import './App.css';
 import { Routes, Route, Link } from "react-router-dom";
-import MainPage from "./Vistas/MainPage"
-import Login from "./Vistas/MaiLoginnPage"
-import Cart from "./Vistas/Cart"
+import MainPage from "./Vistas/MainPage";
+import Login from './components/Login/Login';
 
 
 function App() {
   return (
     <div className="App">
-      <Cart></Cart>
+      <Login></Login>
       {/* <nav>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
