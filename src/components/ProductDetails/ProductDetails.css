@@ -1,0 +1,13 @@
+.bg-danger{
+    color: white;
+}
+h3{
+    color:#079F16;
+}
+
+::placeholder{
+    text-align: center;
+}
+input{
+    text-align: center;
+}
