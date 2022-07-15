@@ -5,42 +5,42 @@ function ProductList() {
     const [productos, setProductos] = useState([
         {
             img: "./images/milk.png",
-            title: "Leche entera fresca",
+            title: "Leche entera 1",
             subtitle: "Botella 1L",
             price: "1,99€"
         },
         {
             img: "./images/milk.png",
-            title: "Leche fresca",
+            title: "Leche fresca ",
             subtitle: "Botella 1L",
             price: "1,99€"
         },
         {
             img: "./images/milk.png",
-            title: "Leche enteras",
+            title: "Leche enteras 2",
             subtitle: "Botella 1L",
             price: "1,99€"
         },
         {
             img: "./images/milk.png",
-            title: "Leche fresca",
+            title: "Leche fresca 3",
             subtitle: "Botella 1L",
             price: "1,99€"
         },
         {
             img: "./images/milk.png",
-            title: "Leche enteras",
+            title: "Leche enteras 4",
             subtitle: "Botella 1L",
             price: "1,99€"
         }, {
             img: "./images/milk.png",
-            title: "Leche fresca",
+            title: "Leche fresca 5",
             subtitle: "Botella 1L",
             price: "1,99€"
         },
         {
             img: "./images/milk.png",
-            title: "Leche enteras",
+            title: "Leche enteras 7",
             subtitle: "Botella 1L",
             price: "1,99€"
         },

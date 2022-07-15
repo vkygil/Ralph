@@ -9,6 +9,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import MainPage from "./Vistas/MainPage";
 import Login from './components/Login/Login';
+import ProductList from './components/ProductList/ProductList';
 import Navbar from './components/Navbar/Navbar'
 
 
@@ -17,7 +18,15 @@ function App() {
     <div className="App">
       <Navbar />
       <Category />
-      <ProductDetails/>
+
+      <div className='container'>
+        <br /><hr />
+        <h1>Product list:</h1>
+        <ProductList />
+      </div>
+      <br /><hr />
+
+      <ProductDetails />
       <Login />
       {/* <Routes>
       <Login></Login>
