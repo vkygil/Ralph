@@ -21,6 +21,29 @@ function ProductList() {
             subtitle: "Botella 1L",
             price: "1,99€"
         },
+        {
+            img: "./images/milk.png",
+            title: "Leche fresca",
+            subtitle: "Botella 1L",
+            price: "1,99€"
+        },
+        {
+            img: "./images/milk.png",
+            title: "Leche enteras",
+            subtitle: "Botella 1L",
+            price: "1,99€"
+        }, {
+            img: "./images/milk.png",
+            title: "Leche fresca",
+            subtitle: "Botella 1L",
+            price: "1,99€"
+        },
+        {
+            img: "./images/milk.png",
+            title: "Leche enteras",
+            subtitle: "Botella 1L",
+            price: "1,99€"
+        },
     ]);
 
     return (
@@ -29,7 +52,7 @@ function ProductList() {
                 {
                     productos.map(product => {
                         return (
-                            <div className="col-sm-4 d-flex justify-content-around " key={product.title}>
+                            <div className="col-sm-6  col-md-4 col-lg-3d-flex justify-content-around " key={product.title}>
                                 <div className="card producto d-flex align-items-center">
                                     <img className='image' src={"./images/milk.png"}></img>
                                     <div className='body'>
