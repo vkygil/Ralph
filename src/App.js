@@ -1,8 +1,7 @@
 
 import './App.css';
-import { Routes, Route, Link } from "react-router-dom";
-import MainPage from "./Vistas/MainPage";
 import Login from './components/Login/Login';
+
 
 
 function App() {
