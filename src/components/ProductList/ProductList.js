@@ -25,7 +25,7 @@ function ProductList() {
             img: "./images/milk.png",
             title: "Leche fresca 3",
             subtitle: "Botella 1L",
-            price: "1,99€"
+            price: "3,99€"
         },
         {
             img: "./images/milk.png",
@@ -42,7 +42,7 @@ function ProductList() {
             img: "./images/milk.png",
             title: "Leche enteras 7",
             subtitle: "Botella 1L",
-            price: "1,99€"
+            price: "2,99€"
         },
     ]);
 
@@ -57,11 +57,11 @@ function ProductList() {
                                     <img className='image' src={"./images/milk.png"}></img>
                                     <div className='body'>
 
-                                        <p className='title'>Leche entera fresca</p>
+                                        <p className='title'>{product.title}</p>
                                         <div className='d-flex justify-content-around align-items-center'>
 
-                                            <span className='text-muted'>Botella 1L</span>
-                                            <span className='price'>1,99€</span>
+                                            <span className='text-muted'>{product.subtitle}</span>
+                                            <span className='price'>{product.price}</span>
                                         </div>
                                     </div>
                                     <div className='cart'>
