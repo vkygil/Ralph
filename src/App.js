@@ -9,11 +9,13 @@ import { Routes, Route, Link } from "react-router-dom";
 import ProductDetails from './components/ProductDetails/ProductDetails';
 import MainPage from "./Vistas/MainPage";
 import Login from './components/Login/Login';
+import Navbar from './components/Navbar/Navbar'
 
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <Category />
       <ProductDetails/>
       <Login />
