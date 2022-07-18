@@ -8,7 +8,9 @@ import Login from "./Vistas/Login"
 import ProductDetails from './components/ProductDetails/ProductDetails';
 
 
+
 function App() {
+    console.log(process.env);
   return (
     <div className="App">
       <ProductDetails/>
