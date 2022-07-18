@@ -6,7 +6,7 @@
 /*Navbar general style*/
 nav {
     font-family: Josefin Sans;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color:#2C2D41;
 }
 
@@ -84,9 +84,5 @@ nav {
 @media (min-width: 1200px) {
     .container-logo {
         display: block;
-    }
-    .img-fluid {
-        height: 140px;
-        width: 100%;
     }
  }
