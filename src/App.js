@@ -1,22 +1,14 @@
 
 import './App.css';
 import Login from './components/Login/Login';
-
+import Cart from './components/Cart/Cart';
+import Category from './components/Category/Category';
 
 
 function App() {
   return (
     <div className="App">
-      <Login></Login>
-      {/* <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-      </nav>
-
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="about" element={<Login />} />
-      </Routes> */}
+      <Login />
     </div>
   );
 }
