@@ -32,11 +32,12 @@
 .btn-shop {
     border-radius: 50px;
     height: 25px;
-    width: 80px;
+    width: 75px;
     background-color: #8E99AD;
     border: none;
     box-shadow: 3px 3px rgba(0,0,0,0.4);
     margin-bottom: 100px;
+    font-size: 0.8rem;
 }
 
 /* XSmall devices (desktops, 375px and up)*/
@@ -56,12 +57,12 @@
         top: 50%;
     }
     .slogan {
-        font-size: 1.6rem;
+        font-size: 2rem;
         font-weight: 700;
     
     }
     .claim {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
     .btn-shop {
         height: 50px;
@@ -77,12 +78,12 @@
         top: 50%;
     }
     .slogan {
-        font-size: 2rem;
+        font-size: 2.4rem;
         font-weight: 700;
     
     }
     .claim {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
     }
     .btn-shop {
         height: 60px;
@@ -90,13 +91,11 @@
         font-size: 1.2rem;
     }
 } 
-/* Large devices (desktops, 1440px and up)*/
+
+/* XLarge devices (desktops, 1440px and up)*/
 @media (min-width: 1440px) { 
     .container-text {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
     .slogan {
         font-size: 3rem;
@@ -104,12 +103,12 @@
     
     }
     .claim {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     .btn-shop {
-        height: 80px;
-        width: 140px;
-        font-size: 2rem;
+        height: 60px;
+        width: 120px;
+        font-size: 1.2rem;
     }
 } 
 
