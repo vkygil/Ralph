@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Navbar general style*/
+nav {
+    font-family: Josefin Sans;
+    font-size: 1.5rem;
+    color:#2C2D41;
+}
+
+.navbar {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.navbar-toggler {
+
+    padding-right: 0;
+}
+.container-logo {
+    display: none;
+}
+
+.nav-link,
+.nav-search,
+.nav-link-icon {
+    color:#2C2D41;
+    text-decoration: none;
+}
+
+/*Form search product style*/
+.form-control {
+    border-radius: 50px;
+    color:#2C2D41;
+    text-decoration: none;
+    font-size: 0.6rem;
+}
+
+.btn {
+    border-style: none;
+}
+
+
+
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+    
+}
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    .container-logo {
+        display: block;
+    }
+    .navbar {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    /*Form search product style*/
+    .form-control {
+    font-size: 1rem;
+    width: 300px;
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+    .container-logo {
+        display: block;
+        }
+
+    /*Form search product style*/
+    .form-control {
+        margin-left: 20px;
+        font-size: 1rem;
+        width: 250px;
+        }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .container-logo {
+        display: block;
+    }
+    .img-fluid {
+        height: 140px;
+        width: 100%;
+    }
+ }
