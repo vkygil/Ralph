@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Economica:wght@400;700&family=IBM+Plex+Serif&family=Inter&family=Italiana&family=Josefin+Sans&family=Josefin+Slab:wght@700&family=Montserrat:wght@300&family=Overpass:wght@900&family=Syne:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Economica:wght@400;700&family=IBM+Plex+Serif&family=Inter&family=Italiana&family=Josefin+Sans:wght@400;700&family=Josefin+Slab:wght@700&family=Montserrat:wght@300&family=Overpass:wght@900&family=Syne:wght@700;800&display=swap');
+
+
+
+
+
+.categoryCardImage {
+    opacity: 50%;
+}
+
+.categoryCardImage:hover {
+    opacity: 100%;
+    transition: 500ms ease-in-out;
+}
+
+.categoryCardText {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    color: #000000;
+}
+
+.categoriesTitle {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #2C2D41;
+}
