@@ -3,23 +3,50 @@ import Axios from "axios";
 
 
 const ProductFuncion = () =>{
-    // const [products, setProduct] = React.useState(null);
-
-    const BaseUrl = process.env.REACT_APP_BASE_URL;
-
     
+    useEffect(()=>{
+    });
+
+    const giveMeAccesKey = async () => {
+        const res =await fetch ('https://api.kroger.com/v1/connect/oauth2/token',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded', 
+                'Autohorization': 'Basc' + process.env.REACT_APP_SECREATTING
+            },
+            body: 'grant_type=client_credentials&scope=product.compact'
+        })
+        .then(response => response.json())
+
+        return res.access_token;
+    }
+
+    const giveMeProductsDetails = async () =>{
+        const accessToken = await giveMeAccesKey()
+
+        const productsUrl = `${"https://api.kroger.com"}/v1/products?filter.term=${"milk"}`;
 
 
-    // useEffect(() => {
-    //     Axios.get(
-    //         "Https://kroger.api.com"
+        const productsResponse = fetch (productsUrl, {
+            method: 'GET', 
+            CACHE: 'no-cache',
+            headers: {
+                Authorization: `bearer ${accessToken}`,
+                "Content-Type": "application/json; charset=utf-8"
+            }
+        }).then(response => response.json())
+            .then(data =>{
+                console.log('Success:', data.data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+    giveMeProductsDetails();
 
-    // ).then((res) =>{
-    //     setProducts(res.data);
-    // })
-    // },[])
 
-    
+
+
 
     return(
         <div>

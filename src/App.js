@@ -18,7 +18,7 @@ function App() {
     console.log(process.env);
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar />
       <Category />
 
       <div className='container'>
@@ -26,7 +26,7 @@ function App() {
         <h1>Product list:</h1>
         <ProductList />
       </div>
-      <br /><hr />
+      <br /><hr /> */}
 
       <ProductDetails />
       <Login />
