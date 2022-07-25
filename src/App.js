@@ -1,25 +1,24 @@
- 
+ import React,{ useState, useEffect} from 'react';
 import './App.css';
-import "./Bootstrap.css"
-import { Routes, Route, Link } from "react-router-dom";
-import MainPage from "./Vistas/MainPage"
-import Login from "./Vistas/Login"
-import Cart from "./Vistas/Cart"
+import Cart from "./components/Cart/Cart";
 
 function App() {
-  return (
-    <div className="App">
-      app
-      {/* <Cart></Cart> */}
-      {/* <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-      </nav>
+  const url = ''
+  const [todos, setTodos] = useState()
+  const fetchApi = async () => {
+    const response = await fetch(url)
+    //console.log(response.status)
+    const responseJSON = await response.json()
+    setTodos(responseJSON)
 
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="about" element={<Login />} />
-      </Routes> */}
+  }
+  useEffect(() => {
+    fetchApi()
+  }, []  )
+  
+  return (
+    <div className='App'>
+    <Cart></Cart>
     </div>
   );
 }
