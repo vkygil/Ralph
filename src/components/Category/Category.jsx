@@ -1,8 +1,8 @@
 import React from 'react'
-
+import CategoryList from '../CategoryList/CategoryList';
 function Category() {
   return (
-    <div>Productos</div>
+    <CategoryList />
   )
 }
 

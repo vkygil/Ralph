@@ -3,7 +3,7 @@ import CategoryButtons from './CategoryButtons';
 import CategoryImages from './CategoryImage';
 import { useState } from 'react';
 import './CategoryList.css';
-
+import Navbar from '../Navbar/Navbar';
 
 function CategoryList() {
     const [show, setShow] = useState(true)
@@ -13,6 +13,7 @@ function CategoryList() {
     }
   return (
     <>
+    <Navbar/>
       <div className="container mt-5 mb-5 justify-content-center">
         <h1 className="categoriesTitle">CATEGORÍAS</h1>
         <div className='container d-flex justify-content-center mt-5 gap-5'>

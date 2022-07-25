@@ -12,8 +12,8 @@ import ProductList from "../components/ProductList/ProductList";
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<App/>}/>
-                    <Route path="./images/logo.png" element={<App/>}/>
-                    <Route path="./Cart" element={<Cart/>}/>
+                    <Route path="/images/logo.png" element={<App/>}/>
+                    <Route path="/Cart" element={<Cart/>}/>
                     <Route path="/Login" element={<Login/>}/>  
                     <Route path="/Category" element={<Category/>}/>
                     <Route path="/Product" element= {<ProductList/>}/>

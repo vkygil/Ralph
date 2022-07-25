@@ -8,7 +8,7 @@ function Navbar() {
       <div>
         <nav className="navbar navbar-expand-lg">
           <div className="container-logo">
-            <Link to="/MainPage"><img className="img-fluid" src={"./images/logo.png"} width="80" height="80" alt="Logo supermercado Ralphs"></img></Link>
+            <Link to="/"><img className="img-fluid" src={"./images/logo.png"} width="80" height="80" alt="Logo supermercado Ralphs"></img></Link>
           </div>
           <form class="d-flex" role="search">
                   <input class="form-control" type="search" placeholder="Buscar productos" aria-label="Search"></input>
