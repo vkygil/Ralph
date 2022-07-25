@@ -1,12 +1,9 @@
 import React from "react";
-import "../Category/Category.css";
-function Category() {
+import "./CategoryImage.css";
+
+function CategoryImages() {
   return (
-    <div className="container">
-      <div className="m-0 mt-5 mb-5 justify-content-center">
-        <h1 className="categoriesTitle">CATEGORÍAS</h1>
-      </div>
-      <div className="d-flex flex-row flex-wrap">
+      <div className="container d-flex flex-row flex-wrap" id="categoryImagesContainer">
           <div className="card border-0 mx-auto">
             <img className="categoryCardImage" alt="Fotografía de frutas variadas" src={"./images/Fruit.png"}></img>
             <p className="categoryCardText">Frutas</p>
@@ -72,8 +69,7 @@ function Category() {
             <p className="categoryCardText">Limpieza</p>
           </div>
         </div>
-      </div>
   );
 }
 
-export default Category;
+export default CategoryImages;

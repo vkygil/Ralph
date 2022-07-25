@@ -1,7 +1,6 @@
 
 import './App.css';
 import "./Bootstrap.css";
-import Category from './components/Category/Category';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 // import "./Bootstrap.css"
@@ -10,8 +9,8 @@ import ProductDetails from './components/ProductDetails/ProductDetails';
 import MainPage from "./Vistas/MainPage";
 import Login from './components/Login/Login';
 import ProductList from './components/ProductList/ProductList';
-import Navbar from './components/Navbar/Navbar'
-
+import Navbar from './components/Navbar/Navbar';
+import Category from './components/Category/Category';
 
 function App() {
   return (

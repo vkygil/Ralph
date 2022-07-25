@@ -70,30 +70,6 @@ function ProductList() {
         return res.access_token;
     }
 
-    let giveMeProductos = async () => {
-        let accessToken = await giveMeAccessKey()
-
-        // let accessToken = "eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vYXBpLmtyb2…M4FMOeoadvGfDvZq1YY2YlDsBmgtBE3wR3c2eUro5xJlv3r8w";
-        let productsUrl = `${"https://api.kroger.com"}/v1/products?filter.term=${"milk"}`;
-        // let productsUrl = `${process.env.REACT_APP_API_BASE_URL}/v1/products?filter.term=${"milk"}`;
-
-        let productsResponse = fetch(productsUrl, {
-            method: "GET",
-            cache: "no-cache",
-            headers: {
-                Authorization: `bearer ${accessToken}`,
-                "Content-Type": "application/json; charset=utf-8"
-            }
-        }).then(response => response.json())
-            .then(data => {
-                console.log('Success:', data.data);
-                // setProductos(data.data)
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
-    }
-    giveMeProductos()
     // giveMeAccessKey()
 
     // ?filter.term=milk&filter.locationId=70381054&filter.limit=6&filter.category=Diary
