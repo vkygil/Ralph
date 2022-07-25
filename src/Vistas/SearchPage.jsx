@@ -3,10 +3,15 @@
 // Product List
 // Footer
 import React from 'react'
+import ProductList from '../components/ProductList'
 
 function SearchPage() {
   return (
-    <div>SearchPage</div>
+    <div>
+
+      <div>SearchPage</div>
+      <ProductList></ProductList>
+    </div>
   )
 }
 
