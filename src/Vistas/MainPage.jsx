@@ -1,7 +1,3 @@
-// aqui va:
-// Navbar
-// Categorias List
-// Footer
 import React from 'react'
 import  Navbar  from '../components/Navbar/Navbar'
 import  CategoryList  from '../components/CategoryList/CategoryList'
