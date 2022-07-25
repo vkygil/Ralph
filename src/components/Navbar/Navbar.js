@@ -1,10 +1,8 @@
 import React from 'react';
 import "../Navbar/Navbar.css";
-import { Link, BrowserRouter } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <BrowserRouter>
       <div>
         <nav className="navbar navbar-expand-lg">
           <div className="container-logo">
@@ -40,7 +38,6 @@ function Navbar() {
           </div>
         </nav>
       </div>
-    </BrowserRouter>
 
   )
 }

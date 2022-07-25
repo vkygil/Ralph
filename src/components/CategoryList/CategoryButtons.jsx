@@ -1,5 +1,6 @@
 import React from 'react';
 import './CategoryButtons.css'
+import giveMeProductos from '../Category/Getproduct';
 
 function CategoryButtons() {
   return (
