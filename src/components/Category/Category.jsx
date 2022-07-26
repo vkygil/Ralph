@@ -1,13 +1,23 @@
-import React  from 'react'
-import CategoryList from '../CategoryList/CategoryList';
+import React from 'react'
+import CategorySideBar from '../CategoryList/CategorySideBar';
+import ProductList from '../ProductList/ProductList';
 import { useParams } from 'react-router-dom';
 
 function Category() {
-const {id} = useParams(); 
+  const { id } = useParams();
 
   return (
     <h1>
-      {id} jeej
+      
+      <div className="row"> 
+        <div className="col-4"> 
+          <CategorySideBar />
+        </div>
+        <div className="col">   
+          <ProductList query={id}></ProductList>
+        </div>
+      </div>
+
     </h1>
   )
 }

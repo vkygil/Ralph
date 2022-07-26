@@ -1,5 +1,5 @@
 import React from 'react'
-import CategoryButtons from './CategoryButtons';
+import CategoryButtons from './CategorySideBar';
 import CategoryImages from './CategoryImage';
 import { useState } from 'react';
 import './CategoryList.css';

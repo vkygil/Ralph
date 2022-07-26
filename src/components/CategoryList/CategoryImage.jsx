@@ -13,50 +13,7 @@ function CategoryImages() {
 
     const [productos, setProductos] = useState([
     ]);
-
-    const [productos2, setProductos2] = useState([
-        {
-            img: "./images/milk.png",
-            title: "Leche entera 1",
-            subtitle: "Botella 1L",
-            price: "1,99€"
-        },
-        {
-            img: "./images/milk.png",
-            title: "Leche fresca ",
-            subtitle: "Botella 1L",
-            price: "1,99€"
-        },
-        {
-            img: "./images/milk.png",
-            title: "Leche enteras 2",
-            subtitle: "Botella 1L",
-            price: "1,99€"
-        },
-        {
-            img: "./images/milk.png",
-            title: "Leche fresca 3",
-            subtitle: "Botella 1L",
-            price: "3,99€"
-        },
-        {
-            img: "./images/milk.png",
-            title: "Leche enteras 4",
-            subtitle: "Botella 1L",
-            price: "1,99€"
-        }, {
-            img: "./images/milk.png",
-            title: "Leche fresca 5",
-            subtitle: "Botella 1L",
-            price: "1,99€"
-        },
-        {
-            img: "./images/milk.png",
-            title: "Leche enteras 7",
-            subtitle: "Botella 1L",
-            price: "2,99€"
-        },
-    ]);
+ 
     useEffect(() => {
         giveMeProductos()
     }, []);
@@ -109,106 +66,98 @@ function CategoryImages() {
             .find(el => el.size == "large")
             .url
     }
+    function openCat(query) {
+      let arr = [
+          "fruits",
+          "frozen",
+          "Vegetables",
+          "Bakeries",
+          "sausages",
+          "Fish",
+          "meats",
+          "Nuts",
+          "Alcoholic beverages",
+          "Personal care",
+          "Ready meals",
+          "Childcare",
+          "snacks",
+          "Beverages",
+          "Legumes",
+          "Cleaning",
+      ]
+      window.open("/Category/" + arr[query], "_self")
 
+  }
     
   return (<>
     {show && (<div className="container d-flex flex-row flex-wrap gap-5 d-none d-md-flex" id="categoryImagesContainer">
           <div className="card border-0 mx-0">
-            <img className="categoryCardImage" alt="Fotografía de frutas variadas" src={"./images/Fruit.png"} onClick={() => {changeVisibility(false); giveMeProductos('Fruit')}}></img>
+            <img className="categoryCardImage" alt="Fotografía de frutas variadas" src={"./images/Fruit.png"} onClick={() => { openCat(0)}}></img>
             <p className="mt-4 mb-0 categoryCardText">Frutas</p>
           </div>
           <div className="card border-0 mx-0">
-            <img className="categoryCardImage" alt="Fotografía de productos congelados" src={"./images/Frosted.png"}></img>
+            <img className="categoryCardImage" alt="Fotografía de productos congelados" src={"./images/Frosted.png"} onClick={() => { openCat(1)}}></img>
             <p className="mt-4 mb-0 categoryCardText">Congelados</p>
           </div>
           <div className="card border-0 mx-0">
-            <img className="categoryCardImage" alt="Fotografía de verduras variadas" src={"./images/Veggies.png"}></img>
+            <img className="categoryCardImage" alt="Fotografía de verduras variadas" src={"./images/Veggies.png"} onClick={() => { openCat(2)}}></img>
             <p className="mt-4 mb-0 categoryCardText">Verduras</p>
           </div>
           <div className="card border-0 mx-0">
-            <img className="categoryCardImage" alt="Fotografía de varios tipos de pan" src={"./images/Bread.png"}></img>
+            <img className="categoryCardImage" alt="Fotografía de varios tipos de pan" src={"./images/Bread.png"} onClick={() => { openCat(3)}}></img>
             <p className="mt-4 mb-0 categoryCardText">Panaderia</p>
           </div>
           <div className="card border-0 mx-0">
-            <img className="categoryCardImage" alt="Fotografía de distintos tipos de embutido" src={"./images/Sausage.png"}></img>
+            <img className="categoryCardImage" alt="Fotografía de distintos tipos de embutido" src={"./images/Sausage.png"} onClick={() => { openCat(4)}}></img>
             <p className="mt-4 mb-0 categoryCardText">Embutido</p>
           </div>
           <div className="card border-0 mx-0">
-            <img className="categoryCardImage" alt="Fotografía de varios tipos de pescado" src={"./images/Seafood.png"}></img>
+            <img className="categoryCardImage" alt="Fotografía de varios tipos de pescado" src={"./images/Seafood.png"} onClick={() => { openCat(5)}}></img>
             <p className="mt-4 mb-0 categoryCardText">Pescado</p>
           </div>
           <div className="card border-0 mx-0">
-            <img className="categoryCardImage" alt="Fotografía de varios tipos de carnes" src={"./images/Meat.png"}></img>
+            <img className="categoryCardImage" alt="Fotografía de varios tipos de carnes" src={"./images/Meat.png"} onClick={() => { openCat(6)}}></img>
             <p className="mt-4 mb-0 categoryCardText">Carnes</p>
           </div>
           <div className="card border-0 mx-0">
-            <img className="categoryCardImage" alt="Fotografía de varios tipos de frutos secos" src={"./images/DN.png"}></img>
+            <img className="categoryCardImage" alt="Fotografía de varios tipos de frutos secos" src={"./images/DN.png"} onClick={() => { openCat(7)}}></img>
             <p className="mt-4 mb-0 categoryCardText">Frutos secos</p>
           </div>
           <div className="card border-0 mx-0">
-            <img className="categoryCardImage" alt="Fotografía de varias botellas de alcohol" src={"./images/Alcohol.png"}></img>
+            <img className="categoryCardImage" alt="Fotografía de varias botellas de alcohol" src={"./images/Alcohol.png"} onClick={() => { openCat(8)}}></img>
             <p className="mt-4 mb-0 categoryCardText">Alcohol</p>
           </div>
           <div className="card border-0 mx-0">
-            <img className="categoryCardImage" alt="Fotografía de varios productos de cuidado personal" src={"./images/Hygiene.png"}></img>
+            <img className="categoryCardImage" alt="Fotografía de varios productos de cuidado personal" src={"./images/Hygiene.png"} onClick={() => { openCat(9)}}></img>
             <p className="mt-4 mb-0 categoryCardText">Cuidado personal</p>
           </div>
           <div className="card border-0 mx-0">
-            <img className="categoryCardImage" alt="Fotografía de varios productos precocinados" src={"./images/Premadefood.png"}></img>
+            <img className="categoryCardImage" alt="Fotografía de varios productos precocinados" src={"./images/Premadefood.png"} onClick={() => { openCat(10)}}></img>
             <p className="mt-4 mb-0 categoryCardText">Platos preparados</p>
           </div>
           <div className="card border-0 mx-0">
-            <img className="categoryCardImage" alt="Fotografía de productos de cuidado infantil" src={"./images/Lotions.png"}></img>
+            <img className="categoryCardImage" alt="Fotografía de productos de cuidado infantil" src={"./images/Lotions.png"} onClick={() => { openCat(11)}}></img>
             <p className="mt-4 mb-0 categoryCardText">Cuidado infantil</p>
           </div>
           <div className="card border-0 mx-0">
-            <img className="categoryCardImage" alt="Fotografía de varios tipos de snacks(Doritos, Lays, etc)" src={"./images/Junkfood.png"}></img>
+            <img className="categoryCardImage" alt="Fotografía de varios tipos de snacks(Doritos, Lays, etc)" src={"./images/Junkfood.png"} onClick={() => { openCat(12)}}></img>
             <p className="mt-4 mb-0 categoryCardText">Snacks</p>
           </div>
           <div className="card border-0 mx-0">
-            <img className="categoryCardImage" alt="Fotografía de varias bebidas refrescantes" src={"./images/Soda.png"}></img>
+            <img className="categoryCardImage" alt="Fotografía de varias bebidas refrescantes" src={"./images/Soda.png"} onClick={() => { openCat(13)}}></img>
             <p className="mt-4 mb-0 categoryCardText">Bebidas</p>
           </div>
           <div className="card border-0 mx-0">
-            <img className="categoryCardImage" alt="Fotografía de varios tipos de legumbres" src={"./images/Beans.png"}></img>
+            <img className="categoryCardImage" alt="Fotografía de varios tipos de legumbres" src={"./images/Beans.png"} onClick={() => { openCat(14)}}></img>
             <p className="mt-4 mb-0 categoryCardText">Legumbres</p>
           </div>
           <div className="card border-0 mx-0">
-            <img className="categoryCardImage" alt="Fotografía de varios productos de limpieza" src={"./images/Cleaning.png"}></img>
+            <img className="categoryCardImage" alt="Fotografía de varios productos de limpieza" src={"./images/Cleaning.png"} onClick={() => { openCat(15)}}></img>
             <p className="mt-4 mb-0 categoryCardText">Limpieza</p>
           </div>
         </div>)}
-        {(!show &&
-          <CategorySideBar/>
-        )}
-        <div>
-            <div className="row">
-                {
-                    productos.map(product => {
-                        return (
-                            <div className="col-sm-6  col-md-4 col-lg-3d-flex justify-content-around " key={product.description}>
-                                <div className="card producto d-flex align-items-center">
-                                    {/* <img className='image' src={"./images/milk.png"}></img> */}
-                                    <img className='image' src={findSize(product.images)}></img>
-                                    <div className='body'>
-
-                                        <p className='title'>{product.description}</p>
-                                        <div className='d-flex justify-content-around align-items-center'>
-
-                                            <span className='text-muted'>{product.categories[2]}</span>
-                                            {/* <span className='price'>{"product.price"}</span> */}
-                                        </div>
-                                    </div>
-                                    <div className='cart'>
-                                        <i className="fa-solid fa-cart-plus"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        )
-                    })
-                }
-            </div>
-        </div>
+        
+        
         </>
   );
 }
