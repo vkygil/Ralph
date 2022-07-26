@@ -5,6 +5,7 @@ import useLogin from './useLogin';
 import validateInfo from './validateInfo';
 import './login.css';
 import Image from '../../images/logo.png';
+import { Navbar } from 'react-bootstrap';
 
 const Login = () => {
 
@@ -12,7 +13,9 @@ const Login = () => {
   //useEffect(() => { window.alert('Under construction') }, [])
 
   return (
+    
     <>
+      <Navbar />
       <div className='text-alert'>
         <h3 className='alert' data-text='En construcción..'>En Construcción..</h3>
       </div>

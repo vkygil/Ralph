@@ -6,9 +6,13 @@
 .fresh-product {
     position: relative;
 }
+
+.fresh-product {
+    justify-items: center;
+}
 .container-text {
-    position: absolute;
-    top: 30%;
+    position: relative;
+    top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: Josefin sans;
@@ -32,7 +36,7 @@
     background-color: #8E99AD;
     border: none;
     box-shadow: 3px 3px rgba(0,0,0,0.4);
-    margin-bottom: 100px;
+    margin-bottom: 120px;
     font-size: 0.8rem;
 }
 
