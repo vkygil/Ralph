@@ -3,12 +3,9 @@
     padding: 0;
 }
 
-.container-fresh {
+.fresh-product {
     position: relative;
-    display: inline-block;
-    text-align: center;
 }
-
 .container-text {
     position: absolute;
     top: 30%;
@@ -21,7 +18,6 @@
 .slogan {
     font-size: 0.7rem;
     font-weight: 700;
-
 }
 
 .claim {
@@ -75,7 +71,7 @@
 @media (min-width: 1024px) { 
     .container-text {
         position: absolute;
-        top: 50%;
+        top: 60%;
     }
     .slogan {
         font-size: 2.4rem;
@@ -100,7 +96,6 @@
     .slogan {
         font-size: 3rem;
         font-weight: 700;
-    
     }
     .claim {
         font-size: 2.2rem;

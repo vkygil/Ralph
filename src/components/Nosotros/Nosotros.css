@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.containerWe {
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.logoPng {
+    margin-bottom: 50px;
+}
+
+.descriptionWe {
+    font-family: Josefin Sans;
+    font-size: 0.6rem;
+    font-weight: 300;
+}
+
+.titleWe {
+    margin: 50px 0 50px 0;
+    font-family: Josefin Sans;
+    color: #2C2D41;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.imgSuper {
+    height: 320px;
+    width: auto;
+}
+
+/* Large devices (desktops, 768px and up)*/
+@media (min-width: 768px) { 
+    .containerWe {
+        display: flex;
+        flex-direction: row;
+    }
+    .descriptionWe {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+} 
