@@ -5,6 +5,7 @@ import Login from "../components/Login/Login";
 import Cart from "../Vistas/Cart";
 import Category from "../components/Category/Category";
 import ProductList from "../components/ProductList/ProductList";
+import CategoryList from "../components/CategoryList/CategoryList";
 
     export default function Router(){
         return (
@@ -15,7 +16,8 @@ import ProductList from "../components/ProductList/ProductList";
                     <Route path="/images/logo.png" element={<App/>}/>
                     <Route path="/Cart" element={<Cart/>}/>
                     <Route path="/Login" element={<Login/>}/>  
-                    <Route path="/Category" element={<Category/>}/>
+                    <Route path="/Category" element={<CategoryList/>}/>
+                    <Route path="/Category/:id" element={<Category/>}/>
                     <Route path="/Product" element= {<ProductList/>}/>
                 </Routes>
             </BrowserRouter>

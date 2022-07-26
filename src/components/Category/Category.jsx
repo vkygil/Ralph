@@ -1,8 +1,14 @@
-import React from 'react'
+import React  from 'react'
 import CategoryList from '../CategoryList/CategoryList';
+import { useParams } from 'react-router-dom';
+
 function Category() {
+const {id} = useParams(); 
+
   return (
-    <CategoryList />
+    <h1>
+      {id} jeej
+    </h1>
   )
 }
 
