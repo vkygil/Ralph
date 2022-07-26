@@ -1,12 +1,11 @@
 import React from 'react';
 import './CategoryButtons.css'
-import giveMeProductos from '../Category/Getproduct';
 
 function CategoryButtons() {
   return (
     <>
     <div className='container' id="categoryButtonsContainer">
-      <div className='d-flex flex-column flex-start p-4 gap-3'>
+      <div className='d-flex flex-column flex-start p-4 gap-3 d-lg-none'>
         <button type="button" className="btn btn-outline-dark rounded-pill" id="categoryBtn">Frutas</button>
         <button type="button" className="btn btn-outline-dark rounded-pill" id="categoryBtn">Congelados</button>
         <button type="button" className="btn btn-outline-dark rounded-pill" id="categoryBtn">Verduras</button>
@@ -22,7 +21,7 @@ function CategoryButtons() {
         <button type="button" className="btn btn-outline-dark rounded-pill" id="categoryBtn">Snacks</button>
         <button type="button" className="btn btn-outline-dark rounded-pill" id="categoryBtn">Bebidas</button>
         <button type="button" className="btn btn-outline-dark rounded-pill" id="categoryBtn">Legumbres</button>
-        <button type="button" className="btn btn-outline-dark rounded-pill" id="categoryBtn">Limpieza</button>
+        <button type="radio" className="btn btn-outline-dark rounded-pill" id="categoryBtn">Limpieza</button>
       </div>
     </div>
     </>

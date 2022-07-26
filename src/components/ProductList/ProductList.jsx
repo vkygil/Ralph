@@ -74,7 +74,7 @@ function ProductList() {
         let accessToken = await giveMeAccessKey()
 
         // let accessToken = "eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vYXBpLmtyb2…M4FMOeoadvGfDvZq1YY2YlDsBmgtBE3wR3c2eUro5xJlv3r8w";
-        let productsUrl = `${"https://api.kroger.com"}/v1/products?filter.term=${"drinks"}`;
+        let productsUrl = `${"https://api.kroger.com"}/v1/products?filter.term=${"Drink"}&filter.locationId=01400441`;
         // let productsUrl = `${process.env.REACT_APP_API_BASE_URL}/v1/products?filter.term=${"milk"}`;
 
         let productsResponse = fetch(productsUrl, {
