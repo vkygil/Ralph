@@ -8,7 +8,7 @@ const ProductFuncion = () =>{
     });
 
     const giveMeAccesKey = async () => {
-        const res =await fetch ('https://api.kroger.com/v1/connect/oauth2/token',{
+        const res =await fetch (`${process.env.REACT_APP_API_BASE_URL}/v1/connect/oauth2/token`,{ 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded', 
@@ -24,7 +24,7 @@ const ProductFuncion = () =>{
     const giveMeProductsDetails = async () =>{
         const accessToken = await giveMeAccesKey()
 
-        const productsUrl = `${"https://api.kroger.com"}/v1/products?filter.term=${"milk"}`;
+        const productsUrl = `${process.env.REACT_APP_API_BASE_URL}/v1/products?filter.term=${"milk"}`;
 
 
         const productsResponse = fetch (productsUrl, {
@@ -43,7 +43,7 @@ const ProductFuncion = () =>{
             });
     }
     giveMeProductsDetails();
-
+    
 
 
 
