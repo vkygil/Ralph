@@ -5,6 +5,9 @@ import Router from './Application/Router';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min"; 
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  

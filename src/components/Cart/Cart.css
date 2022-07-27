@@ -1,0 +1,105 @@
+.numberstyle{
+    width: 29px;
+    border: 0;
+    background: transparent;
+}
+button{
+    width: 29px;
+    border-radius: 420px !important;
+    border: 0;
+}
+.my-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.my-trashBox{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+.boxNumber{
+    
+    background-color: #e3e3e3;
+    border-radius: 9px;
+    padding: 6px;
+
+}
+
+.numberstyle{
+    width: 29px;
+    border: 0;
+    background: transparent;
+}
+button{
+    width: 29px;
+    border-radius: 420px !important;
+    border: 0;
+}
+.my-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.my-trashBox{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+.boxNumber {
+    
+    background-color: #e3e3e3;
+    border-radius: 9px;
+    padding: 6px;
+}
+    
+.Precio {
+       position: absolute;
+       bottom: -30px;
+       right: 50px;
+       font-size: 25px;
+    }
+
+.Total-p {
+    position: absolute;
+    right: 260px;
+    bottom: -35px;
+}
+
+
+
+.btn-primary {
+    position: absolute;
+    right: 20px;
+    width: 164px;
+    bottom: -70px;
+    border-radius: -0.75px;
+   /* margin-top: 30px;*/
+    height: 38px;
+    background: red;
+    border-radius: grey;
+}
+
+@media screen and (max-width: 600px )  {
+    .card-m-4 {
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     justify-items: center;
+}
+
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+   img{
+   width:83px;
+}
+
+   img2{
+    width: 83px;
+   }}
