@@ -4,21 +4,21 @@
 }
 
 .container-text {
-    position: relative;
-    top: 0%;
-    left: 50%;
-    transform: translate(-50%, -120%);
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(0%, -5%);
     font-family: Josefin sans;
     color: #2C2D41;
 }
 
 .slogan {
-    font-size: 0.7rem;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
 .claim {
-    font-size: 0.5rem;
+    font-size: 1.2rem;
     font-weight:500 ;
 }
 
@@ -36,7 +36,7 @@
 /* XSmall devices (desktops, 375px and up)*/
 @media (min-width: 375px) { 
     .container-text {
-        transform: translate(-50%, -70%);
+        transform: translate(10%, 0%);
     }
 
     .btn-shop {
@@ -47,10 +47,24 @@
     }
 }   
 
+/* Small devices (desktops, 425px and up)*/
+@media (min-width: 425px) { 
+    .container-text {
+        transform: translate(-5%, 0%);
+    }
+
+    .btn-shop {
+        margin-bottom: 50px;
+        height: 30px;
+        width: 80px;
+        margin-bottom: 80px;
+    }
+} 
+
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) { 
     .container-text {
-        transform: translate(-50%, -90%);
+        transform: translate(-5%, 0%);
     }
 
     .slogan {
