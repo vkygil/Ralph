@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-.containerWe {
+.containerUs {
     justify-content: center;
     margin-top: 20px;
 }
@@ -12,13 +12,13 @@
     margin-bottom: 20px;
 }
 
-.descriptionWe {
+.descriptionUs {
     font-family: Josefin Sans;
     font-size: 0.6rem;
     font-weight: 300;
 }
 
-.titleWe {
+.titleUs {
     margin: 50px 0 50px 0;
     font-family: Josefin Sans;
     color: #2C2D41;
@@ -26,18 +26,13 @@
     font-weight: 600;
 }
 
-.imgSuper {
-    height: 320px;
-    width: auto;
-}
-
 /* Large devices (desktops, 768px and up)*/
 @media (min-width: 768px) { 
-    .containerWe {
+    .containerUs {
         display: flex;
         flex-direction: row;
     }
-    .descriptionWe {
+    .descriptionUs {
         font-size: 1.5rem;
         font-weight: 300;
     }
