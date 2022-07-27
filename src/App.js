@@ -1,14 +1,20 @@
-
 import './App.css';
-import Login from './components/Login/Login';
-import Cart from './components/Cart/Cart';
-import Category from './components/Category/Category';
-
+import Login from './components/Login';
+import StoreChatbot from './components/chatbot';
+import { useState } from 'react';
 
 function App() {
+  const [showChatBot, setShowChatBot] = useState(false)
+  setTimeout(() => setShowChatBot(true), 5000);
+
   return (
     <div className="App">
       <Login />
+      {showChatBot &&
+        <div style={{ maxWidth: '300px' }} className='chatbot' >
+          <StoreChatbot />
+        </div>
+      }
     </div>
   );
 }
