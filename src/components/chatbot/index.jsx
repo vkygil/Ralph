@@ -2,7 +2,7 @@ import Chatbot from 'react-chatbot-kit';
 import ActionProvider from './ActionProvider';
 import config from './config';
 import MessageParser from './MessageParser';
-import '../Chatbot/Chatbot.css';
+import './chatbot.css';
 
 
 const StoreChatbot = () => {
