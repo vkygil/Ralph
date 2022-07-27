@@ -1,18 +1,16 @@
 import React from 'react';
 import "../Navbar/Navbar.css";
-import { Link, BrowserRouter } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <BrowserRouter>
       <div>
         <nav className="navbar navbar-expand-lg">
           <div className="container-logo">
             <Link to="/MainPage"><img className="img-fluid" src={"./images/logo.png"} width="100" height="100" alt="Logo supermercado Ralphs"></img></Link>
           </div>
-          <form class="d-flex" role="search">
-                  <input class="form-control" type="search" placeholder="Buscar productos" aria-label="Search"></input>
-                  <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-search"></i></button>
+          <form className="d-flex" role="search">
+                  <input className="form-control" type="search" placeholder="Buscar productos" aria-label="Search"></input>
+                  <button className="btn btn-outline-success" type="submit" id="navbarBtn"><i className="fa-solid fa-search"></i></button>
           </form>
           <div className="nav-item">
             <Link className="nav-link-icon px-2" to="/Cart"><i className="fa-solid fa-cart-shopping"></i></Link>
@@ -22,7 +20,7 @@ function Navbar() {
           </div>
           
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+            <span className="navbar-toggler-icon"><i className="fa-solid fa-bars"></i></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
@@ -40,7 +38,6 @@ function Navbar() {
           </div>
         </nav>
       </div>
-    </BrowserRouter>
 
   )
 }
