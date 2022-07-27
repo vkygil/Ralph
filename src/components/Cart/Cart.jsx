@@ -105,6 +105,22 @@ const Cart = () => {
     return counter;
   };
 
+  const wasap =()=>{
+    let arr = [...cart]; 
+    let text = "Productos:" 
+    let index=1
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].qty > 0) {
+        text+= `%0A *${index++}*. ${arr[i].title} x${arr[i].qty} = ${calculaMeElPrecio(arr[i].id)}  `
+      }
+    }
+    let todo = calcularTodo()
+    text += `%0A Total: ${todo} ` 
+    let number = "34662584188"
+    let link = `https://wa.me/${number}?text=${text}` 
+ 
+    window.open(link)
+  }
   return (
     <>
       <Navbar />
@@ -122,7 +138,7 @@ const Cart = () => {
       {cart.map((item) => {
         return (
           item.qty != 0 && (
-            <div key={item.title}>
+            <div key={item.title} className="item">
               <div class="card-m-4">
                 <div class="card-body">
                   <div className="row">
@@ -154,6 +170,7 @@ const Cart = () => {
                       />
                       {/* <h3 className="euro">{item.price}</h3> */}
                       <h3 className="euro">{calculaMeElPrecio(item.id)}</h3>
+                      
                     </div>
                   </div>
                 </div>
@@ -163,6 +180,8 @@ const Cart = () => {
         );
       })}
       <h1>Total: {calcularTodo()}</h1>
+
+      <button className="button btn-success" onClick={wasap}><i class="fa-brands fa-whatsapp"></i> Comprar por Whatssap</button>
     </>
   );
 };
