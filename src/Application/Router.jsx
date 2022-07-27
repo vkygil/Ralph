@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 import App from "../App";
 import Login from "../components/Login/Login";
-import Cart from "../Vistas/Cart";
+import Cart from "../components/Cart/Cart";
 import Category from "../components/Category/Category";
 import ProductList from "../components/ProductList/ProductList";
 import CategoryList from "../components/CategoryList/CategoryList";

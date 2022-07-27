@@ -4,6 +4,7 @@ import { FaTrash } from "react-icons/fa";
 import Image from "../../images/mine.png";
 import Image2 from "../../images/platano.png";
 import "./Cart.css";
+import Navbar from "../Navbar/Navbar";
 const Cart = () => {
   const [cart, setCart] = useState([]);
   const handleClick = (item) => {
@@ -12,6 +13,7 @@ const Cart = () => {
   return (
     <>
       <div>
+        <Navbar/>
         <div class="card-m-4">
           <div class="card-body">
             <div className="row">

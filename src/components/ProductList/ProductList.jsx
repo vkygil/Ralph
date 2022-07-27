@@ -116,6 +116,7 @@ function ProductList() {
                                     <div className='body'>
 
                                         <p className='title'>{product.description}</p>
+                                        <p className="price">{product.items[0].price.regular}</p>
                                         <div className='d-flex justify-content-around align-items-center'>
 
                                             <span className='text-muted'>{product.categories[2]}</span>
