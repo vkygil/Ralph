@@ -1,16 +1,11 @@
 import React from 'react'
-import CategoryButtons from './CategorySideBar';
+import CategoryButtons from './CategoryButtons';
 import CategoryImages from './CategoryImage';
 import { useState } from 'react';
 import './CategoryList.css';
 import Navbar from '../Navbar/Navbar';
 
 function CategoryList() {
-    const [show, setShow] = useState(true)
-
-    const changeVisibility = (parametro) => {
-    setShow(parametro)
-    }
   return (
     <>
     <Navbar/>
@@ -25,7 +20,6 @@ function CategoryList() {
       </div>
     <CategoryImages />
     <CategoryButtons />
-
     </>
   )
 }

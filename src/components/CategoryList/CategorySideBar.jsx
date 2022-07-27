@@ -31,10 +31,10 @@ function CategorySideBar() {
             <button type="button" className="btn btn-outline-dark rounded-pill" onClick={() => openCat(5)}>Pescado</button>
             <button type="button" className="btn btn-outline-dark rounded-pill" onClick={() => openCat(6)}>Carnes</button>
             <button type="button" className="btn btn-outline-dark rounded-pill" onClick={() => openCat(7)}>Frutos secos</button>
-            <button type="button" className="btn btn-outline-dark rounded-pill" onClick={() => openCat(8)}>Bebidas alcoholicas</button>
-            <button type="button" className="btn btn-outline-dark rounded-pill" onClick={() => openCat(9)}>Cuidado personal</button>
-            <button type="button" className="btn btn-outline-dark rounded-pill" onClick={() => openCat(10)}>Platos preparados</button>
-            <button type="button" className="btn btn-outline-dark rounded-pill" onClick={() => openCat(11)}>Cuidado infantil</button>
+            <button type="button" className="btn btn-outline-dark rounded-pill" onClick={() => openCat(8)}>Alcohol</button>
+            <button type="button" className="btn btn-outline-dark rounded-pill" onClick={() => openCat(9)}>Higiene</button>
+            <button type="button" className="btn btn-outline-dark rounded-pill" onClick={() => openCat(10)}>Preparados</button>
+            <button type="button" className="btn btn-outline-dark rounded-pill" onClick={() => openCat(11)}>Bebes</button>
             <button type="button" className="btn btn-outline-dark rounded-pill" onClick={() => openCat(12)}>Snacks</button>
             <button type="button" className="btn btn-outline-dark rounded-pill" onClick={() => openCat(13)}>Bebidas</button>
             <button type="button" className="btn btn-outline-dark rounded-pill" onClick={() => openCat(14)}>Legumbres</button>
