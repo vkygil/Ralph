@@ -8,6 +8,9 @@ import MainPage from './Vistas/MainPage';
 
 
 function App() {
+  const [showChatBot, setShowChatBot] = useState(false)
+  setTimeout(() => setShowChatBot(true), 5000);
+
   return (
     <div className="App">
          <MainPage/>
