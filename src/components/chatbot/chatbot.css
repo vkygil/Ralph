@@ -1,0 +1,29 @@
+.chatbot {
+  display: flex;
+  justify-content: right;
+  /* align-items: center; */
+  max-width: 20vw;
+  min-height: 400px;
+  text-align: right;
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  right: 0;
+  background: aqua;
+  border: 1px solid;
+  padding: 15px;
+}
+
+svg.react-chatbot-kit-user-avatar-icon {
+  width: 20px;
+  float: right;
+}
+
+.react-chatbot-kit-chat-header {
+  font-weight: 700;
+}
+
+.react-chatbot-kit-chat-input-container {
+  position: absolute;
+  bottom: 3px;
+}

@@ -1,15 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { FaGoogle } from 'react-icons/fa';
 import useLogin from './useLogin';
 import validateInfo from './validateInfo';
-import './login.css';
+import './Login.css';
 import Image from '../../images/logo.png';
 
 const Login = () => {
 
   const { handleChange, values, handleSubmit, errors } = useLogin(validateInfo);
-  //useEffect(() => { window.alert('Under construction') }, [])
 
   return (
     <>

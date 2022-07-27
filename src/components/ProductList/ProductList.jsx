@@ -49,27 +49,57 @@ function ProductList() {
         },
     ]);
     useEffect(() => {
-
-    });
+        giveMeProductos()
+    }, []);
     let giveMeAccessKey = async () => {
         let res = await fetch('https://api.kroger.com/v1/connect/oauth2/token', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
-                'Authorization': 'Basic ' +  process.env.REACT_APP_SECRETTING 
+                'Authorization': 'Basic ' + process.env.REACT_APP_SECRETTING
             },
             body: "grant_type=client_credentials&scope=product.compact",
         })
             .then(response => response.json())
-            // .then(data => {
-            //     console.log('Success:', data);
-            // })
-            // .catch((error) => {
-            //     console.error('Error:', error);
-            // });
+        // .then(data => {
+        //     console.log('Success:', data);
+        // })
+        // .catch((error) => {
+        //     console.error('Error:', error);
+        // });
         return res.access_token;
     }
 
+    let giveMeProductos = async () => {
+        let accessToken = await giveMeAccessKey()
+
+        // let accessToken = "eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vYXBpLmtyb2…M4FMOeoadvGfDvZq1YY2YlDsBmgtBE3wR3c2eUro5xJlv3r8w";
+        let productsUrl = `${"https://api.kroger.com"}/v1/products?filter.term=${"Drink"}&filter.locationId=01400441`;
+        // let productsUrl = `${process.env.REACT_APP_API_BASE_URL}/v1/products?filter.term=${"milk"}`;
+
+        let productsResponse = fetch(productsUrl, {
+            method: "GET",
+            cache: "no-cache",
+            headers: {
+                Authorization: `bearer ${accessToken}`,
+                "Content-Type": "application/json; charset=utf-8"
+            }
+        }).then(response => response.json())
+            .then(data => {
+                console.log('Success:', data.data);
+                setProductos(data.data)
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }
+
+    let findSize = (images) => {
+        return images.find(el => el.perspective == "front")
+            .sizes
+            .find(el => el.size == "large")
+            .url
+    }
     // giveMeAccessKey()
 
     // ?filter.term=milk&filter.locationId=70381054&filter.limit=6&filter.category=Diary
@@ -81,14 +111,16 @@ function ProductList() {
                         return (
                             <div className="col-sm-6  col-md-4 col-lg-3d-flex justify-content-around " key={product.description}>
                                 <div className="card producto d-flex align-items-center">
-                                    <img className='image' src={"./images/milk.png"}></img>
+                                    {/* <img className='image' src={"./images/milk.png"}></img> */}
+                                    <img className='image' src={findSize(product.images)}></img>
                                     <div className='body'>
 
                                         <p className='title'>{product.description}</p>
+                                        <p className="price">{product.items[0].price.regular}</p>
                                         <div className='d-flex justify-content-around align-items-center'>
 
-                                            <span className='text-muted'>{product.categories[0]}</span>
-                                            <span className='price'>{product.price}</span>
+                                            <span className='text-muted'>{product.categories[2]}</span>
+                                            {/* <span className='price'>{"product.price"}</span> */}
                                         </div>
                                     </div>
                                     <div className='cart'>

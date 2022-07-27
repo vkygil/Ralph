@@ -21,7 +21,7 @@ let giveMeAccessKey = async () => {
 async function giveMeProductos(text) {
     let accessToken = await giveMeAccessKey()
     // let accessToken = "eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vYXBpLmtyb2…M4FMOeoadvGfDvZq1YY2YlDsBmgtBE3wR3c2eUro5xJlv3r8w";
-    let productsUrl = `${process.env.REACT_APP_API_BASE_URL}/v1/products?filter.term=${text}&filter.limit=50`;
+    let productsUrl = `${process.env.REACT_APP_API_BASE_URL}/v1/products?filter.term=${text}&filter.limit=50&filter.locationId=01400441&filter.limit=50`;
 
     let productsResponse = fetch(productsUrl, {
         method: "GET",

@@ -1,5 +1,5 @@
 import React from "react";
-import "./micss.css"
+import "./Footer.css"
 
 function Footer() {
   return (
