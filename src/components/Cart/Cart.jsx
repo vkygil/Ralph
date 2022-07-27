@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../Cart/Cart.css";
 import { FaTrash } from "react-icons/fa";
 import Image from "../../images/mine.png";
@@ -6,83 +6,163 @@ import Image2 from "../../images/platano.png";
 import "./Cart.css";
 import Navbar from "../Navbar/Navbar";
 const Cart = () => {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState([
+    {
+      id: 1,
+      img: "./images/milk.png",
+      title: "Leche entera 1",
+      subtitle: "Botella 1L",
+      price: "1,99€",
+      qty: 1,
+    },
+    {
+      id: 33,
+
+      img: "./images/milk.png",
+      title: "Leche fresca ",
+      subtitle: "Botella 1L",
+      price: "1,99€",
+      qty: 1,
+    },
+  ]);
+
+  useEffect(() => {
+    let cart = localStorage.getItem("cart");
+    if (cart == null) {
+      localStorage.setItem("cart", "[]");
+      cart = [];
+    } else {
+      cart = JSON.parse(cart);
+    }
+
+    setCart(cart);
+  }, []);
   const handleClick = (item) => {
     console.log(item);
   };
+  const restaMeLo = (id) => {
+    let arr = [...cart];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].id == id) {
+        arr[i].qty = arr[i].qty - 1;
+        if (arr[i].qty < 0) {
+          arr[i].qty = 0;
+        }
+      }
+    }
+    setCart(arr);
+    guardaMeLo();
+  };
+  const sumaMeLo = (id) => {
+    let arr = [...cart];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].id == id) {
+        arr[i].qty = arr[i].qty + 1;
+
+        if (arr[i].qty > 20) {
+          arr[i].qty = 20;
+        }
+      }
+    }
+    setCart(arr);
+    guardaMeLo();
+  };
+  const borraMeLo = (id) => {
+    let arr = [...cart];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].id == id) {
+        arr[i].qty = 0;
+      }
+    }
+    setCart(arr);
+    guardaMeLo();
+  };
+  const calculaMeElPrecio = (id) => {
+    let arr = [...cart];
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].id == id) {
+        // return arr[i].qty * parseFloat(arr[i].price.replace(",", "."));
+        return parseFloat(arr[i].qty * arr[i].price).toFixed(2);
+      }
+    }
+  };
+  const guardaMeLo = () => {
+    let carti = JSON.stringify(cart);
+    localStorage.setItem("cart", carti);
+  };
+  const limpiaMeLo = () => {
+    localStorage.setItem("cart", "[]");
+    window.location.reload();
+    return false;
+  };
+
+  const calcularTodo = () => {
+    let arr = [...cart];
+    let counter = 0;
+    for (let i = 0; i < arr.length; i++) {
+      counter += parseFloat(calculaMeElPrecio(arr[i].id));
+    }
+    return counter;
+  };
+
   return (
     <>
+      <Navbar />
+      <br />
       <div>
-        <Navbar/>
-        <div class="card-m-4">
-          <div class="card-body">
-            <div className="row">
-              <div className="col-3">
-                <img className="img-product" src={Image} />
-              </div>
-              <div className="col-7 my-box">
-                <h2 className="heading">Ensalada Verano</h2>
-                <p className="cantidad">Cantidad</p>
-
-                <div className="boxNumber">
-                  <button>-</button>
-                  <input
-                    class="numberstyle"
-                    type="number"
-                    min="1"
-                    step="1"
-                    value="1"
-                  ></input>
-                  <button>+</button>
-                </div>
-              </div>
-              <div className="col-2 my-trashBox">
-                <FaTrash className="trash-icon" />
-                <h3 className="euro">2€</h3>
-              </div>
-            </div>
-          </div>
-        </div>
+        <input
+          className=""
+          onClick={() => limpiaMeLo()}
+          type="button"
+          value="Clean Cart"
+        />
+        {/* <button className="btn btn-primary"> Clean Cart</button> */}
       </div>
+      <br />
+      {cart.map((item) => {
+        return (
+          item.qty != 0 && (
+            <div key={item.title}>
+              <div class="card-m-4">
+                <div class="card-body">
+                  <div className="row">
+                    <div className="col-3">
+                      <img className="img-product" src={item.img} />
+                    </div>
+                    <div className="col-7 my-box">
+                      <h2 className="heading">{item.title}</h2>
+                      <p className="cantidad">{item.price}</p>
 
-      <div>
-        <div class="card m-4">
-          <div class="card-body">
-            <div className="row">
-              <div className="col-3">
-                <img className="img-product" src={Image2} />
-              </div>
-              <div className="col-7 my-box">
-                <h2 className="heading">Plátano</h2>
-                <p className="cantidad">Cantidad</p>
-
-                <div className="boxNumber">
-                  <button>-</button>
-                  <input
-                    class="numberstyle"
-                    type="number"
-                    min="3"
-                    step="3"
-                    value="3"
-                  ></input>
-                  <button>+</button>
-                </div>
-              </div>
-              <div className="col-2 my-trashBox">
-                <FaTrash className="trash-icon" />
-                <h3 className="euro">1.80€</h3>
-                
-                <div className='TOTAL'>
-                <p className="Total-p">TOTAL :</p>
-                <h1 className="Precio">3.80€</h1>
-                <a href="https://wa.me/34634108663?text=welcome in your mercado" class="btn btn-primary btn-wsp">PROCESO DE PAGO</a>
+                      <div className="boxNumber">
+                        <button onClick={() => restaMeLo(item.id)}>-</button>
+                        <input
+                          class="numberstyle"
+                          type="number"
+                          min="1"
+                          step="1"
+                          max="10"
+                          value={item.qty}
+                          readOnly
+                        ></input>
+                        <button onClick={() => sumaMeLo(item.id)}>+</button>
+                      </div>
+                    </div>
+                    <div className="col-2 my-trashBox">
+                      <FaTrash
+                        className="trash-icon"
+                        onClick={() => borraMeLo(item.id)}
+                      />
+                      {/* <h3 className="euro">{item.price}</h3> */}
+                      <h3 className="euro">{calculaMeElPrecio(item.id)}</h3>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-  
+          )
+        );
+      })}
+      <h1>Total: {calcularTodo()}</h1>
     </>
   );
 };

@@ -56,6 +56,9 @@ button{
     border-radius: 9px;
     padding: 6px;
 }
+.img-product{
+    width:200px
+}
     
 .Precio {
        position: absolute;
