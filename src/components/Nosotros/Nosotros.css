@@ -5,7 +5,7 @@
 
 .containerUs {
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .logoPng {
@@ -19,7 +19,7 @@
 }
 
 .titleUs {
-    margin: 50px 0 50px 0;
+    margin: 50px 0 20px 0;
     font-family: Josefin Sans;
     color: #2C2D41;
     font-size: 1.5rem;

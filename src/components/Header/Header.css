@@ -5,20 +5,20 @@
 
 .container-text {
     position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(0%, -30%);
+    top: 10%;
+    left: 20%;
+    transform: translate(0%, 0%);
     font-family: Josefin sans;
     color: #2C2D41;
 }
 
 .slogan {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
 .claim {
-    font-size: 1.4rem;
+    font-size: 0.8rem;
     font-weight:500 ;
 }
 
@@ -29,7 +29,6 @@
     background-color: #8E99AD;
     border: none;
     box-shadow: 3px 3px rgba(0,0,0,0.4);
-    margin-bottom: 0;
     font-size: 0.6rem;
 }
 
