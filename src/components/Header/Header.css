@@ -46,6 +46,14 @@
     }
 }   
 
+@media (max-width: 768px) { 
+    .slogan{
+        font-size: 1rem;
+        font-weight: 700;
+    }
+} 
+
+
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) { 
     .container-text {

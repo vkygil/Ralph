@@ -84,3 +84,9 @@ footer{
     font-size: 0.6rem;
 
 }
+
+@media (max-width: 320px) { 
+    .socials li a {
+        font-size: .6rem;
+    }
+} 
