@@ -7,8 +7,27 @@ import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 
 
+
 function ProductDetails() {
-  useEffect(() => {});
+  let findSize = (images) => {
+    return images
+      .find((el) => el.perspective == "front")
+      .sizes.find((el) => el.size == "large").url;
+  };
+  const [producto, setProducto] = useState({
+     title:"", img:"", price:"", qty:"", brand:""
+  });
+   
+  useEffect(() => {
+    let data = localStorage.getItem("currentItem")
+    let product = JSON.parse(data)
+    setProducto({ 
+      img: findSize(product.images),
+      title: product.description, 
+      price: product.items[0].price.regular,
+      qty: 1, 
+    })
+  }, []);
 
   const giveMeAccesKey = async () => {
     const res = await fetch(
@@ -55,13 +74,13 @@ function ProductDetails() {
     <div>
       <div className="general_div container-sm justify-content-center">
         <div className="img_div">
-          <p className="tag">Conservas, caldos y cremas-Gazpacho y cremas</p>
-          <img className="rounded" src={img1} alt=""></img>
+          <p className="tag">{producto.title}</p>
+          <img className="rounded" src={producto.img} alt=""></img>
         </div>
         <div className=" info_div container-sm">
           <h2>{}</h2>
           <p>{}</p>
-          <h3>1,70 €/ud.</h3>
+          <h3>{producto.price} €/ud.</h3>
           <hr className=""></hr>
           <div className="buy_div">
             <div className="input_div container-lg ">
@@ -79,7 +98,7 @@ function ProductDetails() {
           </div>
         </div>
         <div className="icon_div">
-          <FontAwesomeIcon className="x_icon" icon={faCircleXmark} />
+          <FontAwesomeIcon className="x_icon" icon={faCircleXmark} onClick={()=>window.history.back()} />
         </div>
       </div>
     </div>

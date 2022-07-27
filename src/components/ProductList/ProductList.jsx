@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./ProductList.css";
+import { Link } from "react-router-dom";
 
-function ProductList() {
+function ProductList({query}) {
   const [productos, setProductos] = useState([]);
   useEffect(() => {
     giveMeProductos();
@@ -22,7 +23,7 @@ function ProductList() {
     let accessToken = await giveMeAccessKey();
 
     // let accessToken = "eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vYXBpLmtyb2…M4FMOeoadvGfDvZq1YY2YlDsBmgtBE3wR3c2eUro5xJlv3r8w";
-    let productsUrl = `${"https://api.kroger.com"}/v1/products?filter.term=${"Drink"}&filter.locationId=01400441`;
+    let productsUrl = `${"https://api.kroger.com"}/v1/products?filter.term=${query}&filter.locationId=01400441`;
 
     let productsResponse = fetch(productsUrl, {
       method: "GET",
@@ -60,13 +61,13 @@ function ProductList() {
       cart = JSON.parse(cart);
     }
 
-    if(cart.find(el=>el.description == product.description)){
-        return
+    if (cart.find((el) => el.description == product.description)) {
+      return;
     }
 
     cart.push({
       id: product.description,
-      img: findSize(product.images), 
+      img: findSize(product.images),
       title: product.description,
       subtitle: product.description,
       price: product.items[0].price.regular,
@@ -75,6 +76,13 @@ function ProductList() {
     cart = JSON.stringify(cart);
     localStorage.setItem("cart", cart);
   };
+
+  const hacerlo = (prod) => {
+    let stringy = JSON.stringify(prod);
+    localStorage.setItem("currentItem", stringy);
+    window.open("/ProductDetails", "_self")
+  };
+
   return (
     <div>
       <div className="row">
@@ -86,7 +94,13 @@ function ProductList() {
             >
               <div className="card producto d-flex align-items-center">
                 {/* <img className='image' src={"./images/milk.png"}></img> */}
-                <img className="image" src={findSize(product.images)}></img>
+                {/* <Link to="/ProductDetails"><img className="image" src={findSize(product.images)}></img></Link> */}
+                <img
+                  className="image"
+                  onClick={() => hacerlo(product)}
+                  src={findSize(product.images)}
+                ></img>
+
                 <div className="body">
                   <p className="title">{product.description}</p>
                   <p className="price">{product.items[0].price.regular}</p>

@@ -7,6 +7,7 @@ import Category from "../components/Category/Category";
 import Form from "../components/Form/Form";
 import CategoryList from "../components/CategoryList/CategoryList";
 import Nosotros from "../components/Nosotros/Nosotros";
+import ProductDetails from "../components/ProductDetails/ProductDetails";
 
     export default function Router(){
         return (
@@ -21,6 +22,7 @@ import Nosotros from "../components/Nosotros/Nosotros";
                     <Route path="/Category/:id" element={<Category/>}/>
                     <Route path="/Form" element= {<Form/>}/>
                     <Route path="/Nosotros" element= {<Nosotros/>}/>
+                    <Route path="/ProductDetails" element= {<ProductDetails/>}/>
                 </Routes>
             </BrowserRouter>
         )

@@ -5,6 +5,7 @@ import Image from "../../images/mine.png";
 import Image2 from "../../images/platano.png";
 import "./Cart.css";
 import Navbar from "../Navbar/Navbar";
+import { Link } from "react-router-dom";
 const Cart = () => {
   const [cart, setCart] = useState([
     {
@@ -143,7 +144,7 @@ const Cart = () => {
                 <div class="card-body">
                   <div className="row">
                     <div className="col-3">
-                      <img className="img-product" src={item.img} />
+                      <Link to="/ProductDetails"><img className="img-product" src={item.img} /></Link>
                     </div>
                     <div className="col-7 my-box">
                       <h2 className="heading">{item.title}</h2>
