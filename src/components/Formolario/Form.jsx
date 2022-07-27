@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
-import "./style.css"
+import "./Form.css"
 
 function Formolario() {
   return (
