@@ -73,22 +73,14 @@ const Cart = () => {
                 <div className='TOTAL'>
                 <p className="Total-p">TOTAL :</p>
                 <h1 className="Precio">3.80€</h1>
-                <a href="#" class="btn btn-primary">PROCESO DE PAGO</a>
+                <a href="https://wa.me/34634108663?text=welcome in your mercado" class="btn btn-primary">PROCESO DE PAGO</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* <div className='content1'>
-      <h1 className="TOTAL:">3.80€</h1>
-        <h2 className='heading'>Ensalada Verano</h2>
-        <FaTrash className='trash-icon' />
-        <img className='mine.png' src={Image} />
-        <h3 className='cantidad'>Cantidad</h3>
-        <i class="fa-solid fa-circle-minus"></i>
-        <button className='addToCart'>Añadir al carito</button>
-      </div> */}
+  
     </>
   );
 };
