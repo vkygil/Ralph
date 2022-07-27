@@ -5,11 +5,11 @@
 
 .containerWe {
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .logoPng {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .descriptionWe {
@@ -24,7 +24,6 @@
     color: #2C2D41;
     font-size: 1.5rem;
     font-weight: 600;
-    text-transform: uppercase;
 }
 
 .imgSuper {
