@@ -14,11 +14,11 @@ function App() {
   return (
     <div className="App">
       <MainPage />
-      {showChatBot &&
+     {/* {showChatBot &&
         <div style={{ maxWidth: '300px' }} className='chatbot' >
           <StoreChatbot />
         </div>
-      }
+      }*/}
     </div>
   );
 }

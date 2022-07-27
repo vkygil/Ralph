@@ -36,7 +36,7 @@ function Navbar() {
                 <Link className="nav-link pl-4" to="/Category">Categorías<span className="sr-only">(current)</span></Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link pl-4" to="/Product">Productos</Link>
+                <Link className="nav-link pl-4" to="/Form">Contacto</Link>
               </li>
               <li className="nav-item">
                 <div className="nav-link pl-4">Nosotros</div>

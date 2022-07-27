@@ -3,7 +3,7 @@ import React from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import useLogin from './useLogin';
 import validateInfo from './validateInfo';
-import './login.css';
+import './Login.css';
 import Image from '../../images/logo.png';
 
 const Login = () => {

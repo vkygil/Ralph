@@ -73,9 +73,7 @@ button{
     bottom: -35px;
 }
 
-
-
-.btn-primary {
+.btn-wsp {
     position: absolute;
     right: 20px;
     width: 164px;
@@ -99,7 +97,7 @@ button{
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
-   img{
+   .img-product{
    width:83px;
 }
 
