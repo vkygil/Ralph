@@ -75,7 +75,7 @@ const Cart = () => {
                 <div className='TOTAL'>
                 <p className="Total-p">TOTAL :</p>
                 <h1 className="Precio">3.80€</h1>
-                <a href="https://wa.me/34634108663?text=welcome in your mercado" class="btn btn-primary">PROCESO DE PAGO</a>
+                <a href="https://wa.me/34634108663?text=welcome in your mercado" class="btn btn-primary btn-wsp">PROCESO DE PAGO</a>
                 </div>
               </div>
             </div>
