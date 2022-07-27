@@ -3,18 +3,11 @@
     padding: 0;
 }
 
-.fresh-product {
-    position: relative;
-}
-
-.fresh-product {
-    justify-items: center;
-}
 .container-text {
     position: relative;
-    top: 100%;
+    top: 0%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -120%);
     font-family: Josefin sans;
     color: #2C2D41;
 }
@@ -36,12 +29,16 @@
     background-color: #8E99AD;
     border: none;
     box-shadow: 3px 3px rgba(0,0,0,0.4);
-    margin-bottom: 120px;
+    margin-bottom: 0;
     font-size: 0.8rem;
 }
 
 /* XSmall devices (desktops, 375px and up)*/
 @media (min-width: 375px) { 
+    .container-text {
+        transform: translate(-50%, -70%);
+    }
+
     .btn-shop {
         margin-bottom: 50px;
         height: 30px;
@@ -53,14 +50,14 @@
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) { 
     .container-text {
-        position: absolute;
-        top: 50%;
+        transform: translate(-50%, -90%);
     }
+
     .slogan {
         font-size: 2rem;
         font-weight: 700;
-    
     }
+
     .claim {
         font-size: 1.4rem;
     }
@@ -74,14 +71,15 @@
 /* Large devices (desktops, 1024px and up)*/
 @media (min-width: 1024px) { 
     .container-text {
-        position: absolute;
-        top: 60%;
+        transform: translate(-50%, -100%);
     }
+    
     .slogan {
         font-size: 2.4rem;
         font-weight: 700;
     
     }
+
     .claim {
         font-size: 1.8rem;
     }
@@ -95,19 +93,20 @@
 /* XLarge devices (desktops, 1440px and up)*/
 @media (min-width: 1440px) { 
     .container-text {
-        position: absolute;
+        transform: translate(-50%, -120%);
     }
     .slogan {
         font-size: 3rem;
         font-weight: 700;
     }
     .claim {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
     }
     .btn-shop {
-        height: 60px;
-        width: 120px;
-        font-size: 1.2rem;
+        height: 80px;
+        width: 140px;
+        font-size: 2rem;
+        margin-top: 40px;
     }
 } 
 

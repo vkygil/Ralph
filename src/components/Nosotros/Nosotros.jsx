@@ -16,7 +16,7 @@ function Nosotros() {
       </div>
 
       <div className='container-fluid d-block containerWe2'>
-        <div className='container-fluid display-4 titleWe'>
+        <div className='container-fluid display-4 text-uppercase titleWe'>
           Nosotros
         </div>
         <div className='container-fluid col-6 descriptionWe'>
