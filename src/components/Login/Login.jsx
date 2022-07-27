@@ -5,7 +5,7 @@ import useLogin from './useLogin';
 import validateInfo from './validateInfo';
 import './login.css';
 import Image from '../../images/logo.png';
-import { Navbar } from 'react-bootstrap';
+import Navbar from '../Navbar/Navbar';
 
 const Login = () => {
 
