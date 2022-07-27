@@ -4,7 +4,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
 import { useState } from 'react';
 import Login from './components/Login/Login';
-import StoreChatbot from './components/Chatbot';
+import StoreChatbot from './components/chatbot';
 import MainPage from './Vistas/MainPage';
 
 function App() {

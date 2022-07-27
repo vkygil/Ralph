@@ -10,7 +10,7 @@ function CategoryList() {
     <>
     <Navbar/>
       <div className="category-container">
-        <div className="container mt-5 mb-5 justify-content-center">
+        <div className="container mt-5 mb-5 d-flex justify-content-center">
           <h1 className="categoriesTitle">CATEGORÍAS</h1>
           {/* <div className='container d-flex justify-content-center mt-5 gap-5'>
           <button type="button" className="btn btn-primary btn-lg" id="btnVisibility" onClick={() => changeVisibility(true)}>Imagenes</button>

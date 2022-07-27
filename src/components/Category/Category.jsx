@@ -11,7 +11,7 @@ function Category() {
     <h1>
        <Navbar/>
       <div className="row"> 
-        <div className="col-4"> 
+        <div className="col-sm-4 col-md-2 col-lg-2"> 
           <CategorySideBar />
         </div>
         <div className="col">   
