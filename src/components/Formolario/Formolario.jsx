@@ -3,7 +3,7 @@ import "./style.css"
 
 function Formolario() {
   return (
-    <div class="contenedor">
+    <div className="contenedor">
      <form action="" class="form">
     <div class="">
         <div class="form-header">
