@@ -18,7 +18,7 @@ const Cart = () => {
           <div class="card-body">
             <div className="row">
               <div className="col-3">
-                <img className="mine.png" src={Image} />
+                <img className="img-product" src={Image} />
               </div>
               <div className="col-7 my-box">
                 <h2 className="heading">Ensalada Verano</h2>
@@ -50,7 +50,7 @@ const Cart = () => {
           <div class="card-body">
             <div className="row">
               <div className="col-3">
-                <img className="platano.png" src={Image2} />
+                <img className="img-product" src={Image2} />
               </div>
               <div className="col-7 my-box">
                 <h2 className="heading">Plátano</h2>
