@@ -52,22 +52,24 @@ footer{
     color: white;
 }
 .socials a, .nodecoration
- {   text-decoration: none;
+{   text-decoration: none;
     color: white;
     
     
 }
 .socials a li{
     font-size: 1.1rem;
- 
 
 }
+
 .socials a:hover  {
     color: red !important;
 } 
+
  a:hover  {
     color: red !important;
 } 
+
 .footer-bottom{
     background: rgb(9, 9, 71);
     width: 100%;
