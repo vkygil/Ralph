@@ -1,11 +1,13 @@
 import React from "react";
-import { Navbar } from "react-bootstrap";
+import Navbar from '../Navbar/Navbar';
 import "./Form.css"
 
 function Formolario() {
   return (
     <div>
-      <Navbar />
+      <div>
+        <Navbar />
+      </div>
       <div className="contenedor">
         <form action="" className="form">
           <div className="">
@@ -25,7 +27,10 @@ function Formolario() {
             <label for="mensaje" className="form-label">Mensaje:</label>
             <textarea id="mensaje" type="text" class="form-textarea" placeholder="Aqui escriba su mensaje" />
 
-            <input type="Submit" className="btn-submit" value="Enviar Consulta" />
+            {/* <input type="Submit" className="btn-submit" value="Enviar Consulta" /> */}
+            <a className=" paddingbox  button btn-submit" href="mailto:name@rapidtables.com">Emviar correo</a>
+
+
           </div>
         </form>
       </div>

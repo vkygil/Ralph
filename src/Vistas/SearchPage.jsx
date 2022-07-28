@@ -1,17 +1,25 @@
-// aqui va:
-// Navbar
-// Product List
-// Footer
 import React from 'react'
-import ProductList from '../components/ProductList'
+import ProductList from '../components/ProductList/ProductList'
+import { useParams } from 'react-router-dom';
+import Navbar from '../components/Navbar/Navbar'
+import CategorySideBar from '../components/CategoryList/CategorySideBar'
 
 function SearchPage() {
+  const { id } = useParams();
+
   return (
     <div>
-
-      <div>SearchPage</div>
-      <ProductList></ProductList>
+    <Navbar search={id} />
+    <div className="row">
+      <div className="col-sm-4 col-md-2 col-lg-2">
+        <CategorySideBar />
+      </div>
+      <div className="col">
+        <h1>Resultados de {id}:</h1>
+        <ProductList query={id}></ProductList>
+      </div>
     </div>
+  </div>
   )
 }
 

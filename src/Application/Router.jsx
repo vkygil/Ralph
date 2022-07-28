@@ -8,6 +8,8 @@ import Form from "../components/Form/Form";
 import CategoryList from "../components/CategoryList/CategoryList";
 import Nosotros from "../components/Nosotros/Nosotros";
 import ProductDetails from "../components/ProductDetails/ProductDetails";
+import SearchPage from "../Vistas/SearchPage";
+import ScrollToTop from '../components/Category/Scrollupbtn'
 
     export default function Router(){
         return (
@@ -20,10 +22,14 @@ import ProductDetails from "../components/ProductDetails/ProductDetails";
                     <Route path="/Login" element={<Login/>}/>  
                     <Route path="/Category" element={<CategoryList/>}/>
                     <Route path="/Category/:id" element={<Category/>}/>
+                    <Route path="/SearchPage/:id" element={<SearchPage/>}/>
+                    
                     <Route path="/Form" element= {<Form/>}/>
                     <Route path="/Nosotros" element= {<Nosotros/>}/>
                     <Route path="/ProductDetails" element= {<ProductDetails/>}/>
                 </Routes>
+      <ScrollToTop />
+
             </BrowserRouter>
         )
     }

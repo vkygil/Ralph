@@ -17,6 +17,7 @@ function Category() {
         </div>
         <div className="col">
           <ProductList query={id}></ProductList>
+          <ScrollToTop />
         </div>
       </div>
     </div>

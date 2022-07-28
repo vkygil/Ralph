@@ -1,3 +1,5 @@
+/* Fuente     font-family: Josefin Sans; */
+
 *{
     margin: 0;
     padding: 0;
@@ -12,13 +14,16 @@
     background-attachment: fixed;
 
  }
-
+input{
+   text-align: left;
+}
  .contenedor .form .form-header .form-title {
     font-weight: normal;
     font-family: sans-serif;
     color: red;
     text-align: center;
     padding: 14px 0;
+    font-family: Josefin Sans;
     
  }
  .contenedor .form .form-header .form-title span{
@@ -39,7 +44,7 @@
     display: block;
     color: black;
     font-size: 16px;
-    font-family: Roboto;
+    font-family: Josefin Sans;
     position: relative;
 
  }
@@ -57,9 +62,10 @@
     border-radius: 20px;
     font-size: 14px;
     color: black;
-    font-family: Roboto;
+    font-family: Josefin Sans;
 
  }
+
  .contenedor .form .form-textarea{
     resize: vertical;
     max-height: 200px;
@@ -77,10 +83,18 @@
     cursor: pointer;
     font-weight: bold;
     border-radius: 5px;
+    font-family: Josefin Sans;
+
  }
  .contenedor .form .btn-submit:hover{
     color: red ;
  }
  
+ .paddingbox{
+   display: flex;
+   width: 100% !important;
+   align-items: center;
+   justify-content: center;
+ }
 
 

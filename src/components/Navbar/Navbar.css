@@ -21,6 +21,7 @@ nav {
 }
 .container-logo {
     display: none;
+    margin-right: 20%;
 }
 
 .nav-link,
@@ -28,6 +29,7 @@ nav {
 .nav-link-icon {
     color:#2C2D41;
     text-decoration: none;
+    margin-right: 20%;
 }
 
 /*Form search product style*/

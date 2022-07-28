@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+.text-alert {
+  margin: auto;
+  width: 400px;
+}
 .text-alert h3 {
   position: relative;
   font-size: 2rem;
   color: rgb(142, 153, 173, 1);
   --webkit-text-sroke: 0.3vw blue;
   text-transform: uppercase;
+  text-align: left;
+  word-break: break-all;
 }
 
 .text-alert h3::before {
@@ -113,8 +119,7 @@ button.form-input-btn.google:hover {
   background: linear-gradient(45deg, #01016387, red);
 }
 
-
-/***Responsive***/
+/*Responsive*/
 @media screen and (max-width: 500px) {
   .text-alert {
     width: 12.5em;

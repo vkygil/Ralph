@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
-
 import { FaGoogle } from 'react-icons/fa';
 import useLogin from './useLogin';
 import validateInfo from './validateInfo';
 import './login.css';
-import Image from '../../images/logo.png';
+// import Image from '../../images/logo.png';
 import Navbar from '../Navbar/Navbar';
 
 const Login = () => {
@@ -20,7 +19,13 @@ const Login = () => {
         <h3 className='alert' data-text='En construcción..'>En Construcción..</h3>
       </div>
       <div className='content'>
-        <img src={Image} className="image" alt="logo" />
+      <img
+              className="img-fluid"
+              src="/images/logo.png"
+              width="80"
+              height="80"
+              alt="Logo supermercado Ralphs"
+            ></img>
         <h1 className='content-header'>Identificate</h1>
         <form className="form" onSubmit={handleSubmit}>
           <h3 className='email-text'>Correo electronico</h3>

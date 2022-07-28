@@ -1,41 +1,49 @@
-import React, { useState } from "react";
-import "../Navbar/Navbar.css";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react'
+import '../Navbar/Navbar.css'
+import { Link } from 'react-router-dom'
 
-function Navbar() {
-  let [collapse, setCcollapse] = useState(true);
-  let [query, setQuery] = useState("");
+function Navbar({ search }) {
+  let [collapse, setCcollapse] = useState(true)
+  let [query, setQuery] = useState('')
   function setCheck() {
-    setCcollapse(!collapse);
+    setCcollapse(!collapse)
   }
 
-  let buscamelo = () => { 
-    window.open("/category/"+query, "_self")
-  };
-
+  let buscamelo = () => {
+    window.open('/SearchPage/' + query, '_self')
+  }
+  const onFormSubmit = (e) => {
+    e.preventDefault()
+    buscamelo()
+  }
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg">
+    <div class="centered">
+      <nav className="navbar navbar-expand-lg ">
         <div className="container-logo">
           <Link to="/">
             <img
               className="img-fluid"
-              src={"../images/logo.png"}
+              src={'../images/logo.png'}
               width="80"
               height="80"
               alt="Logo supermercado Ralphs"
             ></img>
           </Link>
         </div>
-        <form class="d-flex" role="search" onsubmit="return false">
+        <form class="d-flex" role="search" onSubmit={onFormSubmit}>
           <input
             class="form-control"
             type="search"
             placeholder="Buscar productos"
             aria-label="Search"
-            onChange={(evento)=> setQuery(evento.target.value)}
+            defaultValue={search}
+            onChange={(evento) => setQuery(evento.target.value)}
           ></input>
-          <button type="button" class="btn btn-outline-success" onClick={buscamelo}>
+          <button
+            type="button"
+            class="btn btn-outline-success"
+            onClick={buscamelo}
+          >
             <i class="fa-solid fa-search"></i>
           </button>
         </form>
@@ -66,27 +74,34 @@ function Navbar() {
         </button>
         <div
           id="navbarSupportedContent"
-          className={`navbar-collapse ${collapse ? "collapse" : ""}`}
+          className={`navbar-collapse ${collapse ? 'collapse' : ''}`}
         >
           <ul className="navbar-nav mr-auto">
+          <li className="nav-item active">
+              <Link className="nav-link pl-4" to="/">
+              Inicio 
+              </Link>
+            </li>
             <li className="nav-item active">
               <Link className="nav-link pl-4" to="/Category">
                 Categorías<span className="sr-only">(current)</span>
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link pl-4" to="/Form">
-                Contacto
+              <Link className="nav-link pl-4" to="/Nosotros">
+                Nosotros  
               </Link>
             </li>
             <li className="nav-item">
-              <div className="nav-link pl-4">Nosotros</div>
+              <Link className="nav-link pl-4" to="/Form">
+               Contacto
+              </Link>
             </li>
           </ul>
         </div>
       </nav>
     </div>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar

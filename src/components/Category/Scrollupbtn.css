@@ -1,0 +1,13 @@
+.button-thing{
+
+    position: fixed;
+    margin: 30px;
+    bottom: 0;
+    right: 0;
+
+}
+
+.button-thing button{
+padding: 10px 20px;
+
+}

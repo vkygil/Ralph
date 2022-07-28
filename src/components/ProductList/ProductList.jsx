@@ -86,6 +86,10 @@ function ProductList({query}) {
   return (
     <div>
       <div className="row">
+        {(productos.length<1 &&
+          <img src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="" />
+        )}
+
         {productos.map((product) => {
           return (
             <div
@@ -103,7 +107,7 @@ function ProductList({query}) {
 
                 <div className="body">
                   <p className="title">{product.description}</p>
-                  <p className="price">{product.items[0].price.regular}</p>
+                  <p className="price">${product.items[0].price.regular}</p>
                   <div className="d-flex justify-content-around align-items-center">
                     <span className="text-muted">{product.categories[2]}</span>
                     {/* <span className='price'>{"product.price"}</span> */}
@@ -114,6 +118,7 @@ function ProductList({query}) {
                     className="fa-solid fa-cart-plus"
                     onClick={() => addToCart(product)}
                   ></i>
+                  
                 </div>
               </div>
             </div>
