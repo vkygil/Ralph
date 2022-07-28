@@ -22,8 +22,13 @@ function Formolario() {
         <label for="mensaje" class="form-label">Mensaje:</label>
         <textarea  id="mensaje" type="text" class="form-textarea" placeholder="Aqui escriba su mensaje"/>
 
-        <input type="Submit" class="btn-submit" value="Enviar Consulta"/>  
     </div>
+    <a href="https://login.yahoo.com/?.src=ymlang=es-ESdone=https%3A%2F%2Fmail.yahoo.com%2F%3Fguce_referrer%3DaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8%26guce_referrer_sig%3DAQAAAANLfdC2mcWwROZX3VAuZh3XVUKxL2HiSXPnXYhg6m_IrU4Auh2-GGoc09B3GXS-GJMojcOn5YiJRK3qLYV08XWdJUqWai-tJdCAL6mt4gNw_0-k1iAk7wfXmUm4Js-4lp98RnkXHPbaWFx_AwYQWPRImrZiGdchY-lQVvswsAPVface">
+      <button className="btn-submit">Enviar Consulta</button>
+    </a>
+    
+    
+    
     </form>
 </div>
    
