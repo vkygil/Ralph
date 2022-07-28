@@ -2,7 +2,7 @@ const Options = (props) => {
     const options = [
         {
             text: 'Hacer Pedido',
-            handler: () => { window.location = 'https://google.com' },
+            handler: () => { window.location = 'https://categories.com' },
             id: 1,
         },
         {

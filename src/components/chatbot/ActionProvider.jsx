@@ -14,7 +14,7 @@ class ActionProvider {
         this.createCustomMessage = createCustomMessage;
     }
     greet = () => {
-        const message = this.createChatBotMessage('Hola, para hablar con un agente, pulsa aqui. Para hacer un pedido, pulsa aqui.')
+        const message = this.createChatBotMessage('Hola, para hablar con atención de cliente, hacer pedido o ayuda.')
         this.addMessageToState(message);
     }
 
